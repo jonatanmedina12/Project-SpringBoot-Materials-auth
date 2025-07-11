@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/auth_management_prod}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:password}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+logging:
+  level:
+    com.authmanagement: INFO
+    org.hibernate.SQL: WARN
+  file:
+    name: /var/log/auth-management/app.log
+
+app:
+  jwt:
+    secret: ${JWT_SECRET_PROD}  # Debe ser configurado en producción
+    expiration: ${JWT_EXPIRATION_PROD:86400}
+    refresh-expiration: ${JWT_REFRESH_EXPIRATION_PROD:2592000}
