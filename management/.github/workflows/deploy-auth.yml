@@ -48,9 +48,9 @@ jobs:
         run: |
           mvn clean test
         env:
-          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/auth_test_db
-          SPRING_DATASOURCE_USERNAME: test
-          SPRING_DATASOURCE_PASSWORD: test
+          SPRING_DATASOURCE_URL: jdbc:postgresql://gondola.proxy.rlwy.net:47582/railway
+          SPRING_DATASOURCE_USERNAME: postgres
+          SPRING_DATASOURCE_PASSWORD: MhjFVUvDAZjxxNNCbFBuHMqEwlftgzdu
           SPRING_PROFILES_ACTIVE: test
 
       - name: Generate test report
