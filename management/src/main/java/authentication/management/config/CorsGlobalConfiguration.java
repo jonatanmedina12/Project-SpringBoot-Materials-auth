@@ -29,8 +29,8 @@ public class CorsGlobalConfiguration {
         // ✅ Orígenes permitidos - usar patterns para mayor flexibilidad
         configuration.setAllowedOriginPatterns(Arrays.asList(
                 "http://localhost:4200",     // Angular desarrollo
-                "http://localhost:3000",     // React desarrollo (si aplica)
-                "https://tu-dominio.com"     // Producción (actualizar cuando sea necesario)
+                "http://localhost:3000",
+                "https://materialauth.whispererlab.com/"
         ));
 
         // ✅ Métodos HTTP permitidos
