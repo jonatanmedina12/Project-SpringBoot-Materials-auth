@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+  RAILWAY_TOKEN: ab271022-6b92-4cee-b43c-2564ee8a7f85
 
 jobs:
   test:
@@ -43,10 +43,10 @@ jobs:
 
       - name: Deploy to Railway
         run: |
-          railway login --token $RAILWAY_TOKEN
+          railway login --token ab271022-6b92-4cee-b43c-2564ee8a7f85
           railway up
         env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          RAILWAY_TOKEN: ab271022-6b92-4cee-b43c-2564ee8a7f85
 
       - name: Wait for deployment
         run: |
